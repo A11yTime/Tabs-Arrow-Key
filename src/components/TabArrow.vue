@@ -1,10 +1,12 @@
 <template>
   <div>
-    <div role="tablist">
+    <h3 id="tab-list">More Great Deals From Le Creuset</h3>
+    <div role="tablist" aria-labelledby="tab-list">
       <button 
         v-for="(tab, index) in tabs" 
         :key="index"
         role="tab"
+        :id="`tab-${index + 1}`"
         :aria-selected="index === activeTabIndex ? 'true' : 'false'"
         :aria-controls="`tab-panel-${index + 1}`"
         :tabindex="index === activeTabIndex ? '0' : '-1'"
@@ -28,8 +30,8 @@
       :aria-labelledby="`tab-${index + 1}`"
     >
       <!-- Content for Tab {{ index + 1 }} -->
-      <p>{{ tab.content }}</p>
       <img :src="tab.image" alt="" />
+      <p>{{ tab.content }}</p>
     </div>
   </div>
 </template>
