@@ -7,3 +7,4 @@
 * role="tab": For individual tab as announce as tab for screen reader
 * role="tabpanel": For the child of tab
 * aria-controls="id": Establish parent child relationship with tabs and tabpanel.
+* aria-labelledby="id": Providing accessible name.
